@@ -20,5 +20,6 @@ Rear Depth Sensor  | 2 MP, f/2.4, (depth)
 Front Camera | 8 MP, f/2.0, 1/4", 1.12µm
 Release Date | 02 April 2020
 
-![xiaoMi Redmi 8A Pro](https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-8a-pro.jpg)
-
+![1](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-BLUE.png "1")
+![2](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-GREY.png "2")
+![3](https://i01.appmifile.com/webfile/globalimg/Mandy/C3K3-800x800-WHITE.png "3")
