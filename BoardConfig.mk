@@ -87,7 +87,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8937
 TARGET_BOARD_PLATFORM := msm8937
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/xiaomi/olivewood/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 
@@ -108,7 +108,7 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-# Display
+# Displayn it with the Text Editor and look for the same line of code "ccode=GB" and change it to "ccode=US", save the file.
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_HWC2 := true
 
@@ -117,10 +117,10 @@ BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/xiaomi/olivewood/configs/vendor_framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := device/xiaomi/olivewood/configs/framework_manifest.xml
-DEVICE_MANIFEST_FILE := device/xiaomi/olivewood/configs/manifest.xml
-DEVICE_MATRIX_FILE   := device/xiaomi/olivewood/configs/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
+DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/configs/compatibility_matrix.xml
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
@@ -140,7 +140,7 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 #TARGET_KERNEL_SOURCE := kernel/xiaomi/olivewood
 #TARGET_KERNEL_CONFIG := olivewood-perf_defconfig
 #TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_PREBUILT_KERNEL:= device/xiaomi/olivewood/zImage-dtb
+TARGET_PREBUILT_KERNEL:= $(DEVICE_PATH)/prebuilt/zImage-dtb
 BOARD_BOOTIMG_HEADER_VERSION := 1
 #Kernel Reparation
 TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
@@ -161,7 +161,7 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/firmware_mnt:/firmware \
     /mnt/vendor/persist:/persist
-BOARD_PREBUILT_VENDORIMAGE := device/xiaomi/olivewood/vendor.img
+BOARD_PREBUILT_VENDORIMAGE := $(DEVICE_PATH)/vendor.img
 TARGET_COPY_OUT_VENDOR := vendor
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 #BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -171,10 +171,10 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event3"
 
 # Props
-TARGET_SYSTEM_PROP += device/xiaomi/olivewood/system.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Release Tools
-TARGET_RELEASETOOLS_EXTENSIONS := device/xiaomi/olivewood
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.qcom
@@ -183,7 +183,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # SELinux
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += device/qcom/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += device/qcom/sepolicy/public
-BOARD_SEPOLICY_DIRS += device/xiaomi/olivewood/sepolicy/temp
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/temp
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
