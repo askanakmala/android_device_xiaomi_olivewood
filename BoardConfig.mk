@@ -201,3 +201,4 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
 # Inherit proprietary version
 -include vendor/xiaomi/olivewood/BoardConfigVendor.mk
+
